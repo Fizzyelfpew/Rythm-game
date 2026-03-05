@@ -21,3 +21,5 @@ C:\Users\gustav.johnsson\Documents\Programering 1\Rythm game\ConsoleApp1\obj\Deb
 C:\Users\gustav.johnsson\Documents\Programering 1\Rythm game\ConsoleApp1\obj\Debug\net9.0\ConsoleApp1.pdb
 C:\Users\gustav.johnsson\Documents\Programering 1\Rythm game\ConsoleApp1\obj\Debug\net9.0\ConsoleApp1.genruntimeconfig.cache
 C:\Users\gustav.johnsson\Documents\Programering 1\Rythm game\ConsoleApp1\obj\Debug\net9.0\ref\ConsoleApp1.dll
+C:\Users\gustav.johnsson\Documents\Programering 1\Rythm game\ConsoleApp1\bin\Debug\net9.0\cloud.png
+C:\Users\gustav.johnsson\Documents\Programering 1\Rythm game\ConsoleApp1\bin\Debug\net9.0\nuvem.png

@@ -37,7 +37,16 @@ class Program
             Texture.Cloudsize1();
             Texture.Cloudsize2();
             Texture.Huntersize();
-        
+            bool overlapping = Raylib.CheckCollisionRecs(hunterrectangle, cloudRectangle);
+            if (Raylib.IsKeyPressed(KeyboardKey.H)&& overlapping == true)
+            {
+                // Raylib.DrawTexturePro()
+            } 
+            if(Raylib.IsKeyPressed(KeyboardKey.H) && overlapping == false)
+            {
+                
+            } 
+
         }
         Raylib.CloseWindow();
     }

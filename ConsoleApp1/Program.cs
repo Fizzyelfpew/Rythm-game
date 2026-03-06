@@ -13,32 +13,25 @@ class Program
         Vector2 Player = new Vector2(400, 225);
         // Texture2D cloud=Texture.cloud();
         Texture2D cloud = Texture.Cloud();
-        Texture2D hunter = Texture.Hunter();
-        Rectangle hunterrectangle = new(100,700, hunter.Dimensions);
+        Hunter.texture = Texture.Hunter();
+        Rectangle hunterrectangle = new(100,700, Hunter.texture.Dimensions);
 
         Rectangle cloudRectangle = new(1000, 225, cloud.Dimensions);
         Rectangle cloudRectangle2 = new(200, 125, cloud.Dimensions);
+        
 
         while (!Raylib.WindowShouldClose())
         {
         // Input
-            if(Raylib.IsKeyPressed(KeyboardKey.H)) ; 
-            if(Raylib.IsKeyPressed(KeyboardKey.J)) ; 
-            if(Raylib.IsKeyPressed(KeyboardKey.K)) ; 
-            if(Raylib.IsKeyPressed(KeyboardKey.L)) ; 
-
-            
+        Hunter.hunterIdleAnimation();
 
         //Drawing
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Color.SkyBlue);
-
             Raylib.EndDrawing();
-            Texture.Cloudsize1();
-            Texture.Cloudsize2();
-            Texture.Huntersize();
-            
-
+            Texture.Cloudsize1(cloud);
+            Texture.Cloudsize2(cloud);
+            Frame_animation.Hunter_shooting();
 
         }
         Raylib.CloseWindow();

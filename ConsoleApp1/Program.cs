@@ -15,23 +15,21 @@ class Program
         Texture2D cloud = Texture.Cloud();
         Hunter.texture = Texture.Hunter();
         Rectangle hunterrectangle = new(100,700, Hunter.texture.Dimensions);
-
         Rectangle cloudRectangle = new(1000, 225, cloud.Dimensions);
         Rectangle cloudRectangle2 = new(200, 125, cloud.Dimensions);
-        
-
         while (!Raylib.WindowShouldClose())
         {
         // Input
-        Hunter.hunterIdleAnimation();
 
         //Drawing
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Color.SkyBlue);
-            Raylib.EndDrawing();
             Texture.Cloudsize1(cloud);
             Texture.Cloudsize2(cloud);
-            Frame_animation.Hunter_shooting();
+            Hunter.HunterIdleAnimation();
+            Frame_animation.Hunter_shooting(cloud);
+            
+            Raylib.EndDrawing();
 
         }
         Raylib.CloseWindow();

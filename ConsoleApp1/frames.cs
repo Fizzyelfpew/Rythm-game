@@ -3,14 +3,13 @@ using Raylib_cs;
 using System.Numerics;
 public class Frame_animation()
 {
+
     public static Texture2D Hunter_shooting(Texture2D cloud)
     {
-        
         Rectangle hunterrectangle = new(100, 700, Hunter.texture.Dimensions);
         Rectangle cloudRectangle = new(1000, 225, cloud.Dimensions);
         bool overlapping = Raylib.CheckCollisionRecs(hunterrectangle, cloudRectangle);
-        for (int animationlength = 0; animationlength < 20; animationlength++)
-        {
+
         if (Raylib.IsKeyPressed(KeyboardKey.H)|| Raylib.IsKeyPressed(KeyboardKey.J)||Raylib.IsKeyPressed(KeyboardKey.K)||Raylib.IsKeyPressed(KeyboardKey.L) && overlapping == false )
         {
                 Rectangle hunterspritesource2 = new(128, 128, 128, 128);
@@ -18,12 +17,13 @@ public class Frame_animation()
                 Vector2 hunterOrigin = new Vector2(hunterspriteDest2.Width / 2, hunterspriteDest2.Height / 2);
                 float hunterrotation = 0;
                 Raylib.DrawTexturePro(Hunter.texture, hunterspritesource2, hunterspriteDest2, hunterOrigin, hunterrotation, Color.White);
+                
         }
-        }
-        return Hunter.texture;
-       
-    }
 
+        return Hunter.texture;
+        }
 }
+
+
 
 

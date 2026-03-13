@@ -2,9 +2,7 @@
 using System.Numerics;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
-
-class Program
-{
+Main();
     static void Main()
     {
         // Start
@@ -19,6 +17,8 @@ class Program
         Rectangle cloudRectangle = new(1000, 225, cloud.Dimensions);
         Rectangle cloudRectangle2 = new(200, 125, cloud.Dimensions);
         bool overlapping = Raylib.CheckCollisionRecs(hunterrectangle, cloudRectangle);
+        bool doingaction = false;
+        int frametimelength = 0;
 
 
         while (!Raylib.WindowShouldClose())
@@ -30,15 +30,11 @@ class Program
             Raylib.ClearBackground(Color.SkyBlue);
             Texture.Cloudsize1(cloud);
             Texture.Cloudsize2(cloud);
-            Hunter.HunterIdleAnimation();
-            Frame_animation.Hunter_shooting(cloud);
+            (frametimelength, doingaction) =Frame_animation.Hunter_shooting_Miss(cloud, frametimelength, doingaction);
          
-    
-            
             
             Raylib.EndDrawing();
 
         }
         Raylib.CloseWindow();
     }
-}

@@ -43,7 +43,16 @@ public class Texture()
 
         return hunter;
     }
-
+    public static Texture2D Crosshair(Texture2D aim, Rectangle aimspriteDest)
+    {
+    
+        Rectangle aimsritesource1 = new (0,0,2048,2048);
+        Vector2 aimOrigin = new Vector2(aimspriteDest.Width/2,aimspriteDest.Height/2);
+        float aimrotation = 0;
+        Raylib.DrawTexturePro(aim, aimsritesource1,aimspriteDest, aimOrigin, aimrotation, Color.White);
+        
+        return aim;
+    }
 
 
 }

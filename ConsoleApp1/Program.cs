@@ -2,9 +2,7 @@
 using System.Numerics;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
-Main();
-    static void Main()
-    {
+
         // Start
 
         Raylib.InitWindow(1200, 800, "Skyrush");
@@ -54,4 +52,3 @@ Main();
 
         }
         Raylib.CloseWindow();
-    }

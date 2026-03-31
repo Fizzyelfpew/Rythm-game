@@ -1,17 +1,14 @@
 
 using Raylib_cs;
 using System.Numerics;
+using System.Security.Cryptography.X509Certificates;
 public class Frame_animation()
 {
 
-
         public static (int, bool) Hunter_shooting_Miss(Texture2D cloud, int frametimelength, bool doingaction, bool overlapping, bool overlapping1, bool overlapping2, bool overlapping3)
-        {
+        {      
 
-                
-                
-
-                if ((Raylib.IsKeyPressed(KeyboardKey.H) || Raylib.IsKeyPressed(KeyboardKey.J) || Raylib.IsKeyPressed(KeyboardKey.K) || Raylib.IsKeyPressed(KeyboardKey.L) && (overlapping == false || overlapping1 == false || overlapping2 == false || overlapping3 == false) ) || doingaction == true)
+                if (Raylib.IsKeyPressed(KeyboardKey.H) && overlapping == false  || doingaction == true)
                 {
                         doingaction = true;
                         Rectangle hunterspritesource2 = new(128, 128, 128, 128);
@@ -30,6 +27,40 @@ public class Frame_animation()
                                 frametimelength++;
                         }
                 }
+                
+
+                if (Raylib.IsKeyPressed(KeyboardKey.J) && overlapping1 == false  || doingaction == true)
+                {
+                        doingaction = true;
+                        Rectangle hunterspritesource2 = new(128, 128, 128, 128);
+                        Rectangle hunterspriteDest2 = new(100, 760, 512, 512);
+                        Vector2 hunterOrigin = new Vector2(hunterspriteDest2.Width / 2, hunterspriteDest2.Height / 2);
+                        float hunterrotation = 0;
+                        Raylib.DrawTexturePro(Hunter.texture, hunterspritesource2, hunterspriteDest2, hunterOrigin, hunterrotation, Color.White);
+                }
+                
+
+                if (Raylib.IsKeyPressed(KeyboardKey.K) && overlapping2 == false  || doingaction == true)
+                {
+                        doingaction = true;
+                        Rectangle hunterspritesource2 = new(128, 128, 128, 128);
+                        Rectangle hunterspriteDest2 = new(100, 760, 512, 512);
+                        Vector2 hunterOrigin = new Vector2(hunterspriteDest2.Width / 2, hunterspriteDest2.Height / 2);
+                        float hunterrotation = 0;
+                        Raylib.DrawTexturePro(Hunter.texture, hunterspritesource2, hunterspriteDest2, hunterOrigin, hunterrotation, Color.White);
+                }
+                
+
+                if (Raylib.IsKeyPressed(KeyboardKey.L) && overlapping3 == false  || doingaction == true)
+                {
+                        doingaction = true;
+                        Rectangle hunterspritesource2 = new(128, 128, 128, 128);
+                        Rectangle hunterspriteDest2 = new(100, 760, 512, 512);
+                        Vector2 hunterOrigin = new Vector2(hunterspriteDest2.Width / 2, hunterspriteDest2.Height / 2);
+                        float hunterrotation = 0;
+                        Raylib.DrawTexturePro(Hunter.texture, hunterspritesource2, hunterspriteDest2, hunterOrigin, hunterrotation, Color.White);
+                }
+                
                 else
                 {
                         Texture.Huntersize(Hunter.texture);
@@ -37,11 +68,12 @@ public class Frame_animation()
 
                 return (frametimelength, doingaction);
         }
-        public static int Bird_animation(int birdAnimation, Texture2D bird, Rectangle birdspriteDest)
+        public static int Bird_animation(int birdAnimation, Texture2D bird, Rectangle birdspriteDest, float x, float y)
         {
         Rectangle birdspritesource1 = new(0,0, 64,64);
         Rectangle birdspritesource2 = new(64,0, 64,64);
         Rectangle birdspritesource3 = new(0,64, 64,64);
+        Rectangle birdspritedest = new(x, y, 128, 128);
         Vector2 birdOrigin = new Vector2(birdspriteDest.Width/2,birdspriteDest.Height/2);
         float birdrotation = 180;
         if (birdAnimation == 0)

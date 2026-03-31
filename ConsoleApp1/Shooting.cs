@@ -1,6 +1,8 @@
 
 using Raylib_cs;
 using System.Numerics;
-class Bird
+class Game_Mechanics
 {
+
+
 }

@@ -7,7 +7,7 @@ public class Texture()
          Texture2D cloud = Raylib.LoadTexture(@"nuvem.png");
         return cloud;
     }
-    public static Texture2D Cloudsize1(Texture2D cloud)
+    public static Texture2D Cloud1size(Texture2D cloud)
     {
         Rectangle cloudspritesource1 = new(0,0, 32,32);
         Rectangle cloudspriteDest = new(1000, 425, 256,256);
@@ -17,7 +17,7 @@ public class Texture()
         return cloud;
 
     }
-    public static Texture2D Cloudsize2(Texture2D cloud)
+    public static Texture2D Cloud2size(Texture2D cloud)
     {
         Rectangle cloudspritesource1 = new(0,0, 32,32);
         Rectangle cloudspriteDest2 = new(200, 100, 256,256);

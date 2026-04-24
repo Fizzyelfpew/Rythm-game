@@ -6,8 +6,9 @@ public class Frame_animation()
 {
 
 
-        public static (int, bool) Hunter_shooting_Miss(Texture2D cloud, int frametimelength, bool doingaction, bool overlapping, bool overlapping1, bool overlapping2, bool overlapping3)
+        public static (int, bool) Hunter_shooting_Miss_animation(Texture2D cloud, int frametimelength, bool doingaction, bool overlapping, bool overlapping1, bool overlapping2, bool overlapping3)
         {      
+                // Player shooting and missing target animation
                 
                 if (Raylib.IsKeyPressed(KeyboardKey.H) && overlapping == false  || doingaction == true)
                 {
@@ -62,7 +63,7 @@ public class Frame_animation()
         }
 
 
-        public static int Bird_animation(int birdAnimation, Texture2D bird, Rectangle birdspriteDest)
+        public static int Bird_flying_animation(int birdAnimation, Texture2D bird, Rectangle birdspriteDest) //Birds drawing and wings flapping
         {
         Rectangle birdspritesource1 = new(0,0, 64,64);
         Rectangle birdspritesource2 = new(64,0, 64,64);

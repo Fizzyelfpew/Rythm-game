@@ -26,4 +26,3 @@ C:\Users\gustav.johnsson\Documents\Programering 1\Rythm game\ConsoleApp1\bin\Deb
 C:\Users\gustav.johnsson\Documents\Programering 1\Rythm game\ConsoleApp1\bin\Debug\net9.0\Hunter.png
 C:\Users\gustav.johnsson\Documents\Programering 1\Rythm game\ConsoleApp1\bin\Debug\net9.0\Bird.png
 C:\Users\gustav.johnsson\Documents\Programering 1\Rythm game\ConsoleApp1\bin\Debug\net9.0\aim.png
-C:\Users\gustav.johnsson\Documents\Programering 1\Rythm game\ConsoleApp1\bin\Debug\net9.0\J.png

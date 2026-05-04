@@ -114,3 +114,8 @@ using System.Security.Cryptography.X509Certificates;
 
         }
         Raylib.CloseWindow();
+
+        // Improvements and fixes fixes
+        // First fix, i need to align hitboxes with their corresponding sprites
+        // Fix overlapping always being false and not working
+        // Add hunter hitting animation
